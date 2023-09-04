@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>magic eightball</title>
+        <meta name="description" content="" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Victor+Mono:wght@400;700&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="/assets/style.css" />
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">
+                You are using an <strong>outdated</strong> browser. Please
+                <a href="#">upgrade your browser</a> to improve your experience.
+            </p>
+        <![endif]-->
+        <main>
+            <div class="instructions">
+                <header>
+                    <h1 id="question">Ask the Magic 8</h1>
+                    <!-- input for user question -->
+                    <div class="user-question">
+                        <label for="ask" class="css-gui-obbjqz">
+                            <span class="css-gui-1doevve"
+                                ><small>Enter your question</small></span
+                            >
+                            <input
+                                class="css-gui-u16bi5"
+                                type="text"
+                                id="ask"
+                                name="ask"
+                                aria-label="Type in a question"
+                                autocomplete="off"
+                            />
+                        </label>
+                        <button class="css-gui-17zccri" type="submit" id="btn">
+                            Shake
+                        </button>
+                    </div>
+                    <!----->
+                </header>
+                <footer>
+                    <small
+                        >Adapted from Codecademy Magic 8 project &amp; animated
+                        with GSAP.</small
+                    >
+                    <a href="#">Github</a>
+                </footer>
+            </div>
+
+            <div class="animation">
+                <div class="ball-section">
+                    <div class="magic-8-ball">
+                        <!-- output for user question -->
+                        <div class="output">
+                            <p id="answer" style="opacity: 0"></p>
+                        </div>
+                        <!----->
+                        <svg
+                            id="ball"
+                            class="ball-wrapper"
+                            width="700"
+                            height="700"
+                            viewBox="0 0 700 700"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <defs>
+                                <radialGradient
+                                    id="radial-gradient"
+                                    cx="349.25"
+                                    cy="125.29"
+                                    fx="291.94"
+                                    fy="-.33"
+                                    r="282.48"
+                                    gradientTransform="translate(0 59.28) scale(1 .53)"
+                                    gradientUnits="userSpaceOnUse"
+                                >
+                                    <stop offset=".12" stop-color="#fff" />
+                                    <stop
+                                        offset=".12"
+                                        stop-color="#fff"
+                                        stop-opacity=".7"
+                                    />
+                                    <stop
+                                        offset=".12"
+                                        stop-color="#fff"
+                                        stop-opacity=".4"
+                                    />
+                                    <stop
+                                        offset=".59"
+                                        stop-color="#fff"
+                                        stop-opacity=".2"
+                                    />
+                                    <stop
+                                        offset=".59"
+                                        stop-color="#fff"
+                                        stop-opacity=".17"
+                                    />
+                                    <stop
+                                        offset=".59"
+                                        stop-color="#fff"
+                                        stop-opacity=".08"
+                                    />
+                                    <stop
+                                        offset=".59"
+                                        stop-color="#fff"
+                                        stop-opacity=".02"
+                                    />
+                                    <stop
+                                        offset=".59"
+                                        stop-color="#fff"
+                                        stop-opacity="0"
+                                    />
+                                </radialGradient>
+                                <radialGradient
+                                    id="paint0_radial_184_553"
+                                    cx="0"
+                                    cy="0"
+                                    r="1"
+                                    gradientUnits="userSpaceOnUse"
+                                    gradientTransform="translate(367.5 313) rotate(90.2221) scale(387.003 436.981)"
+                                >
+                                    <stop stop-color="white" stop-opacity="0" />
+                                    <stop
+                                        offset="0.1875"
+                                        stop-color="#725fff"
+                                        stop-opacity="0"
+                                    />
+                                    <stop offset="0.78932" stop-opacity="0" />
+                                    <stop
+                                        offset="0.789864"
+                                        stop-opacity="0.1"
+                                    />
+                                    <stop
+                                        offset="0.917273"
+                                        stop-color="#323232"
+                                        stop-opacity="0.3"
+                                    />
+                                    <stop
+                                        offset="0.917597"
+                                        stop-opacity="0.5"
+                                    />
+                                </radialGradient>
+                                <clipPath id="Clip01">
+                                    <circle cx="350" cy="350" r="350" />
+                                </clipPath>
+                            </defs>
+                            <g id="clipPath" clip-path="url(#Clip01)">
+                                <image
+                                    id="texture"
+                                    href="/assets/magic-eight-ball_purple.webp"
+                                />
+                                <circle
+                                    cx="350"
+                                    cy="350"
+                                    r="350"
+                                    fill="url(#radial-gradient)"
+                                    style="mix-blend-mode: soft-light"
+                                />
+                                <circle
+                                    cx="350"
+                                    cy="350"
+                                    r="350"
+                                    fill="url(#paint0_radial_184_553)"
+                                    style="mix-blend-mode: hard-light"
+                                />
+                            </g>
+                        </svg>
+                    </div>
+
+                    <div class="ground">
+                        <svg
+                            class="shadow"
+                            id="shadow"
+                            width="318"
+                            height="62"
+                            viewBox="0 0 318 62"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <ellipse
+                                cx="159"
+                                cy="31"
+                                rx="159"
+                                ry="31"
+                                fill="url(#paint0_radial_196_681)"
+                            />
+                            <defs>
+                                <radialGradient
+                                    id="paint0_radial_196_681"
+                                    cx="0"
+                                    cy="0"
+                                    r="1"
+                                    gradientUnits="userSpaceOnUse"
+                                    gradientTransform="translate(159 31) rotate(90) scale(31 159)"
+                                >
+                                    <stop
+                                        offset="0.357871"
+                                        stop-opacity="0.15"
+                                    />
+                                    <stop
+                                        offset="0.996995"
+                                        stop-opacity="0.15"
+                                    />
+                                    <stop offset="1" stop-opacity="0" />
+                                </radialGradient>
+                            </defs>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+        <script src="/assets/script.js"></script>
+    </body>
+</html>
