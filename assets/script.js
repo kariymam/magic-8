@@ -62,7 +62,7 @@ function shakeEightBall() {
         .to('#shadow', { scale: 1, ease: 'power2' }, '-=1')
         .to('#texture', { x: 0, duration: 1, ease: 'power2.out' }, '-=1')
 
-    return (eightBallText.textContent = eightBall)
+    return (eightBallText.textContent = eightBall) && tl;
 }
 
 shakeBtn.addEventListener('click', shakeEightBall)
